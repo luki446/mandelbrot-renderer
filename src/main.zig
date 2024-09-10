@@ -26,7 +26,7 @@ fn mandelbrot(pixel_x: i32, pixel_y: i32) i32 {
     var iteration: i32 = 0;
 
     while (x * x + y * y <= 2 * 2 and iteration < MAX_ITER) : (iteration += 1) {
-        var xtemp = x * x - y * y + x0;
+        const xtemp = x * x - y * y + x0;
         y = 2 * x * y + y0;
         x = xtemp;
     }
